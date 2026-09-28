@@ -10,16 +10,18 @@
 // Binary: Comparison - Logical
 // Ternary: 
 
-   // 1. Chiedo i due numeri all'utente
-let num1 = Number(prompt("Inserisci il primo numero:"));
-let num2 = Number(prompt("Inserisci il secondo numero:"));
+ // 1. Dichiaro le due variabili
+let totaleGatti = 44;
+let gattiInFila = 6;
 
-// 2. Eseguo i calcoli
-let somma = num1 + num2;
-let sottrazione = num1 - num2;
-let moltiplicazione = num1 * num2;
-let divisione = num1 / num2;
-let potenza = num1 ** num2;
+// 2. Calcolo il numero di file
+let file = Math.floor(totaleGatti / gattiInFila);
 
-// 3. Stampo la frase richiesta
-console.log("Con i numeri da te scelti, i risultati delle varie operazioni sono: somma (" + somma + "), sottrazione (" + sottrazione + "), moltiplicazione (" + moltiplicazione + "), divisione (" + divisione + "), potenza (" + potenza + ")");
+// 3. Calcolo quanti gatti rimangono fuori
+let avanzo = totaleGatti % gattiInFila;
+
+// 4. Calcolo quanti gatti mancano per una nuova fila
+let mancanti = (gattiInFila - avanzo) % gattiInFila;
+
+// 5. Stampo la frase
+console.log("Ci sono " + file + " file di gatti e ne mancano " + mancanti + " per una nuova fila, con un avanzo di " + avanzo);
