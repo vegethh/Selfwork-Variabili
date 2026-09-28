@@ -12,19 +12,19 @@
 
 // Condition: if - switch
 
-let sommaDispari = 0;
-let conteggioDispari = 0;
+let scelta;
 
-for (let i = 1; i <= 20; i++) {
-    if (i % 2 === 0) {
-        // Stampo solo i numeri pari
-        console.log(i);
+do {
+    scelta = prompt("Seleziona una bevanda:\n1 - Acqua\n2 - Coca Cola\n3 - Birra");
+
+    if (scelta === "1") {
+        console.log("E’ stata selezionata l’acqua");
+    } else if (scelta === "2") {
+        console.log("E’ stata selezionata coca cola");
+    } else if (scelta === "3") {
+        console.log("E’ stata selezionata birra");
     } else {
-        // Accumulo i dispari per calcolare la media
-        sommaDispari += i;
-        conteggioDispari++;
+        console.log("Scelta non valida, riprova...");
     }
-}
 
-let mediaDispari = sommaDispari / conteggioDispari;
-console.log("La media dei numeri dispari è: " + mediaDispari);
+} while (scelta !== "1" && scelta !== "2" && scelta !== "3");
