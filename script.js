@@ -10,15 +10,16 @@
 // Binary: Comparison - Logical
 // Ternary: 
 
-   // 1. Dichiaro anno corrente e anno di nascita
-let annoCorrente = 2026;
-let annoNascita = 2006;
+   // 1. Chiedo i due numeri all'utente
+let num1 = Number(prompt("Inserisci il primo numero:"));
+let num2 = Number(prompt("Inserisci il secondo numero:"));
 
-// 2. Calcolo l'età
-let eta = annoCorrente - annoNascita;
+// 2. Eseguo i calcoli
+let somma = num1 + num2;
+let sottrazione = num1 - num2;
+let moltiplicazione = num1 * num2;
+let divisione = num1 / num2;
+let potenza = num1 ** num2;
 
-// 3. Calcolo quanti anni mancano ai 100
-let anniMancanti = 100 - eta;
-
-// 4. Stampo la frase richiesta
-console.log("Hai " + eta + " anni e ti mancano " + anniMancanti + " anni per compierne 100");
+// 3. Stampo la frase richiesta
+console.log("Con i numeri da te scelti, i risultati delle varie operazioni sono: somma (" + somma + "), sottrazione (" + sottrazione + "), moltiplicazione (" + moltiplicazione + "), divisione (" + divisione + "), potenza (" + potenza + ")");
