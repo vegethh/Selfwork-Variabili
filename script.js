@@ -10,18 +10,47 @@
 // Binary: Comparison - Logical
 // Ternary: 
 
- // 1. Dichiaro le due variabili
-let totaleGatti = 44;
-let gattiInFila = 6;
+// Condition: if - switch
 
-// 2. Calcolo il numero di file
-let file = Math.floor(totaleGatti / gattiInFila);
+let v = 29;
 
-// 3. Calcolo quanti gatti rimangono fuori
-let avanzo = totaleGatti % gattiInFila;
+// ========== VERSIONE CON IF / ELSE ==========
+if (v < 18) {
+    console.log("insufficiente");
+} else if (v >= 18 && v < 21) {
+    console.log("sufficiente");
+} else if (v >= 21 && v < 24) {
+    console.log("buono");
+} else if (v >= 24 && v < 27) {
+    console.log("distinto");
+} else if (v >= 27 && v <= 29) {
+    console.log("ottimo");
+} else if (v === 30) {
+    console.log("eccellente");
+} else {
+    console.log("Voto non valido");
+}
 
-// 4. Calcolo quanti gatti mancano per una nuova fila
-let mancanti = (gattiInFila - avanzo) % gattiInFila;
-
-// 5. Stampo la frase
-console.log("Ci sono " + file + " file di gatti e ne mancano " + mancanti + " per una nuova fila, con un avanzo di " + avanzo);
+// ========== VERSIONE CON SWITCH ==========
+switch (true) {
+    case (v < 18):
+        console.log("insufficiente");
+        break;
+    case (v >= 18 && v < 21):
+        console.log("sufficiente");
+        break;
+    case (v >= 21 && v < 24):
+        console.log("buono");
+        break;
+    case (v >= 24 && v < 27):
+        console.log("distinto");
+        break;
+    case (v >= 27 && v <= 29):
+        console.log("ottimo");
+        break;
+    case (v === 30):
+        console.log("eccellente");
+        break;
+    default:
+        console.log("Voto non valido");
+}
