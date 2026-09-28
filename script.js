@@ -10,30 +10,18 @@
 // Binary: Comparison - Logical
 // Ternary: 
 
-        // 1. Dichiaro num1 e num2
-        let num1 = 10;
-        let num2 = 25;
+     // 1. Dichiaro 5 variabili numeriche
+let num1 = 10;
+let num2 = 20;
+let num3 = 30;
+let num4 = 40;
+let num5 = 50;
 
-        // 2. Visualizzo a schermo i loro valori
-        console.log(num1);
-        console.log(num2);
+// 2. Calcolo la somma
+let somma = num1 + num2 + num3 + num4 + num5;
 
-        // 3. Dichiaro la variabile stringa
-        let stringa = "Ciao mondo!";
+// 3. Calcolo la media
+let media = somma / 5;
 
-        // 4. Stampo il valore di stringa
-        console.log(stringa);
-
-        // 5. Sostituisco il valore di stringa e lo stampo di nuovo
-        stringa = "Nuovo valore della stringa";
-        console.log(stringa);
-
-        // 6. Dichiaro la costante PIGRECO
-        const PIGRECO = 3.14159265359;
-
-        // 7. Visualizzo il valore di PIGRECO
-        console.log(PIGRECO);
-
-        // 8. Provo a cambiare il valore della costante (genererà un errore)
-        PIGRECO = 3.14;   
-   
+// 4. Stampo la frase richiesta
+console.log("La somma tra i numeri equivale a " + somma + " e la media equivale a " + media);
