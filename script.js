@@ -12,8 +12,19 @@
 
 // Condition: if - switch
 
-let num = 2;
+let sommaDispari = 0;
+let conteggioDispari = 0;
 
-for (let i = 1; i <= 10; i++) {
-    console.log(num + " x " + i + " = " + (num * i));
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+        // Stampo solo i numeri pari
+        console.log(i);
+    } else {
+        // Accumulo i dispari per calcolare la media
+        sommaDispari += i;
+        conteggioDispari++;
+    }
 }
+
+let mediaDispari = sommaDispari / conteggioDispari;
+console.log("La media dei numeri dispari è: " + mediaDispari);
