@@ -12,19 +12,23 @@
 
 // Condition: if - switch
 
-let scelta;
+// Function - DRY Principle
 
-do {
-    scelta = prompt("Seleziona una bevanda:\n1 - Acqua\n2 - Coca Cola\n3 - Birra");
+let array_1 = [
+  ['un', 'per', 'incatenarli.'],
+  ['Anello', 'trovarli,'],
+  ['ghermirli', 'e'],
+  ['gondor', 'mark'],
+];
 
-    if (scelta === "1") {
-        console.log("E’ stata selezionata l’acqua");
-    } else if (scelta === "2") {
-        console.log("E’ stata selezionata coca cola");
-    } else if (scelta === "3") {
-        console.log("E’ stata selezionata birra");
-    } else {
-        console.log("Scelta non valida, riprova...");
-    }
+let array_2 = [
+  [['trovarli,']],
+  ['tu,', 'sciocchi'],
+  ['tu,', 'sciocchi', ['padron', 'Sauron']],
+  ['nel', ['fuggite', 'gandalf']],
+  [['domarli,', 'passare'], 'buio']
+];
 
-} while (scelta !== "1" && scelta !== "2" && scelta !== "3");
+let frase = "Un " + array_1[1][0] + " " + array_1[0][1] + " " + array_2[4][0][0] + " " + array_1[0][0] + " " + array_1[1][0] + " " + array_1[0][1] + " " + array_1[1][1] + " " + array_1[0][0] + " " + array_1[1][0] + " " + array_1[0][1] + " " + array_1[2][0] + " " + array_1[2][1] + " " + array_2[3][0] + " " + array_2[4][1] + " " + array_1[0][2];
+
+console.log(frase);
