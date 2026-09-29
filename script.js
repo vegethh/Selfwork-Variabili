@@ -14,34 +14,30 @@
 
 // Function - DRY Principle
 
-let array = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4, 12, 25];
+let a = [3, 5, 10, 2, 8];
 
-// ===== ORDINAMENTO DECRESCENTE =====
-let arrayDecrescente = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4, 12, 25];
+// Calcolo della somma e della media
+let somma = 0;
+for (let i = 0; i < a.length; i++) {
+    somma = somma + a[i];
+}
+let media = somma / a.length;
 
-for (let i = 0; i < arrayDecrescente.length; i++) {
-    for (let j = 0; j < arrayDecrescente.length - 1; j++) {
-        if (arrayDecrescente[j] < arrayDecrescente[j + 1]) {
-            let temp = arrayDecrescente[j];
-            arrayDecrescente[j] = arrayDecrescente[j + 1];
-            arrayDecrescente[j + 1] = temp;
-        }
+// I valori minori della media
+let minori = [];
+let conteggioMinori = 0;
+let conteggioMaggiori = 0;
+
+for (let i = 0; i < a.length; i++) {
+    if (a[i] < media) {
+        minori.push(a[i]);
+        conteggioMinori = conteggioMinori + 1;
+    } else if (a[i] > media) {
+        conteggioMaggiori = conteggioMaggiori + 1;
     }
 }
 
-console.log("Ordine decrescente:", arrayDecrescente);
-
-// ===== ORDINAMENTO CRESCENTE =====
-let arrayCrescente = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4, 12, 25];
-
-for (let i = 0; i < arrayCrescente.length; i++) {
-    for (let j = 0; j < arrayCrescente.length - 1; j++) {
-        if (arrayCrescente[j] > arrayCrescente[j + 1]) {
-            let temp = arrayCrescente[j];
-            arrayCrescente[j] = arrayCrescente[j + 1];
-            arrayCrescente[j + 1] = temp;
-        }
-    }
-}
-
-console.log("Ordine crescente:", arrayCrescente);
+console.log("media = " + media);
+console.log("valori minori = " + minori);
+console.log("Numero di valori minori della media: " + conteggioMinori);
+console.log("Numero di valori maggiori della media: " + conteggioMaggiori);
