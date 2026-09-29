@@ -14,25 +14,34 @@
 
 // Function - DRY Principle
 
-function isPalindroma(str) {
-    // 1. Tolgo spazi e punteggiatura e metto tutto in minuscolo
-    let pulita = str.replace(/\W/g, "").toLowerCase();
+let array = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4, 12, 25];
 
-    // 2. Creo la stringa al contrario
-    let invertita = "";
-    for (let i = pulita.length - 1; i >= 0; i--) {
-        invertita = invertita + pulita[i];
-    }
+// ===== ORDINAMENTO DECRESCENTE =====
+let arrayDecrescente = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4, 12, 25];
 
-    // 3. Confronto e restituisco true o false
-    if (pulita === invertita) {
-        return true;
-    } else {
-        return false;
+for (let i = 0; i < arrayDecrescente.length; i++) {
+    for (let j = 0; j < arrayDecrescente.length - 1; j++) {
+        if (arrayDecrescente[j] < arrayDecrescente[j + 1]) {
+            let temp = arrayDecrescente[j];
+            arrayDecrescente[j] = arrayDecrescente[j + 1];
+            arrayDecrescente[j + 1] = temp;
+        }
     }
 }
 
-// Esempi di prova
-console.log(isPalindroma("i topi non avevano nipoti"));  // true
-console.log(isPalindroma("ciao"));                       // false
-console.log(isPalindroma("Anna"));                       // true
+console.log("Ordine decrescente:", arrayDecrescente);
+
+// ===== ORDINAMENTO CRESCENTE =====
+let arrayCrescente = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4, 12, 25];
+
+for (let i = 0; i < arrayCrescente.length; i++) {
+    for (let j = 0; j < arrayCrescente.length - 1; j++) {
+        if (arrayCrescente[j] > arrayCrescente[j + 1]) {
+            let temp = arrayCrescente[j];
+            arrayCrescente[j] = arrayCrescente[j + 1];
+            arrayCrescente[j + 1] = temp;
+        }
+    }
+}
+
+console.log("Ordine crescente:", arrayCrescente);
